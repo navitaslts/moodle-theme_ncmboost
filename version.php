@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * NCM Theme based on boost theme .
+ * NCM Theme based on boost theme.
  *
  * @package    theme_ncmboost
  * @copyright  2017 Nicolas Jourdain
@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 // This is the version of the plugin.
-$plugin->version = 2018040600;
+$plugin->version = 2018041300;
 
 // This is the version of Moodle this plugin requires.
 $plugin->requires = 2016112900.00;

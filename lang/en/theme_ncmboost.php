@@ -30,9 +30,9 @@ $string['advancedsettings'] = 'Advanced settings';
 // The backgrounds tab name.
 $string['backgrounds'] = 'Backgrounds';
 // The brand colour setting.
-$string['brandcolor'] = 'Brand colour';
+$string['ncmbrandcolor'] = 'Brand colour';
 // The brand colour setting description.
-$string['brandcolor_desc'] = 'The accent colour.';
+$string['ncmbrandcolor_desc'] = 'The accent colour.';
 // A description shown in the admin theme selector.
 $string['choosereadme'] = 'Theme ncmboost is a child theme of Boost.';
 // Name of the settings pages.

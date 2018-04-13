@@ -27,3 +27,7 @@ body {
     background-image: url([[pix:theme_ncmboost|defaultbackgroundimage]]);
     background-size: cover;
 }
+
+header.bordertop-brand {
+    border-top:5px solid $ncm-brandcolor;
+}

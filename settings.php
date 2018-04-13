@@ -15,8 +15,8 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * @package   theme_photo
- * @copyright 2016 Damyon Wiese
+ * @package   theme_ncmboost
+ * @copyright 2017 Nicolas Jourdain
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -66,11 +66,21 @@ if ($ADMIN->fulltree) {
         array('maxfiles' => 20, 'accepted_types' => array('.scss')));
     $page->add($setting);
 
-    // Variable $brand-color.
+
+    // Variable $ncmbrand-color.
     // We use an empty default value because the default colour should come from the preset.
-    $name = 'theme_ncmboost/brandcolor';
-    $title = get_string('brandcolor', 'theme_ncmboost');
-    $description = get_string('brandcolor_desc', 'theme_ncmboost');
+    // $name = 'theme_ncmboost/brandcolor';
+    // $title = get_string('brandcolor', 'theme_ncmboost');
+    // $description = get_string('brandcolor_desc', 'theme_ncmboost');
+    // $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    // $setting->set_updatedcallback('theme_reset_all_caches');
+    // $page->add($setting);
+
+    // Variable $ncmbrand-color.
+    // We use an empty default value because the default colour should come from the preset.
+    $name = 'theme_ncmboost/ncmbrandcolor';
+    $title = get_string('ncmbrandcolor', 'theme_ncmboost');
+    $description = get_string('ncmbrandcolor_desc', 'theme_ncmboost');
     $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);

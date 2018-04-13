@@ -18,7 +18,7 @@
  * NCM Theme based on boost theme .
  *
  * @package    theme_ncmboost
- * @copyright  2017 Nicolas Jourdain
+ * @copyright  2018 Nicolas Jourdain
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -118,3 +118,37 @@ function theme_ncmboost_update_settings_images($settingname) {
     theme_reset_all_caches();
 }
 
+/**
+ * Get SCSS to prepend.
+ *
+ * @param theme_config $theme The theme config object.
+ * @return array
+ */
+function theme_ncmboost_get_pre_scss($theme) {
+    global $CFG;
+
+    $scss = '';
+    $configurable = [
+        // Config key => [variableName, ...].
+        'brandcolor' => ['brand-primary'],
+        'ncmbrandcolor' => ['ncm-brandcolor'],
+    ];
+
+    // Prepend variables first.
+    foreach ($configurable as $configkey => $targets) {
+        $value = isset($theme->settings->{$configkey}) ? $theme->settings->{$configkey} : null;
+        if (empty($value)) {
+            continue;
+        }
+        array_map(function($target) use (&$scss, $value) {
+            $scss .= '$' . $target . ': ' . $value . ";\n";
+        }, (array) $targets);
+    }
+
+    // Prepend pre-scss.
+    if (!empty($theme->settings->scsspre)) {
+        $scss .= $theme->settings->scsspre;
+    }
+
+    return $scss;
+}

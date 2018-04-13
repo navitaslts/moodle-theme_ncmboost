@@ -18,7 +18,7 @@
  * NCM Theme based on boost theme.
  *
  * @package   theme_ncmboost
- * @copyright 2016 Damyon Wiese
+ * @copyright 2017 Nicolas Jourdain
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -50,6 +50,8 @@ $THEME->parents = ['boost'];
 // A dock is a way to take blocks out of the page and put them in a persistent floating area on the side of the page. Boost
 // does not support a dock so we won't either - but look at bootstrapbase for an example of a theme with a dock.
 $THEME->enable_dock = false;
+
+$THEME->prescsscallback = 'theme_ncmboost_get_pre_scss';
 
 // This is an old setting used to load specific CSS for some YUI JS. We don't need it in Boost based themes because Boost
 // provides default styling for the YUI modules that we use. It is not recommended to use this setting anymore.
