@@ -24,8 +24,15 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+// MODIFICATION START.
+global $PAGE;
+// MODIFICATION END.
+
 user_preference_allow_ajax_update('drawer-open-nav', PARAM_ALPHA);
 require_once($CFG->libdir . '/behat/lib.php');
+// MODIFICATION Start: Require own locallib.php.
+require_once($CFG->dirroot . '/theme/ncmboost/locallib.php');
+// MODIFICATION END.
 
 if (isloggedin()) {
     $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
@@ -51,6 +58,9 @@ $templatecontext = [
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)
 ];
 
-$templatecontext['flatnavigation'] = $PAGE->flatnav;
+// MODIDFICATION START.
+//$templatecontext['flatnavigation'] = $PAGE->flatnav;
+$templatecontext['flatnavigation'] = theme_ncmboost_process_flatnav($PAGE->flatnav);
+// MODIFICATION END.
 echo $OUTPUT->render_from_template('theme_ncmboost/columns2', $templatecontext);
 
