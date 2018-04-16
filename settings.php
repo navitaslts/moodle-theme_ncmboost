@@ -93,6 +93,37 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+
+    // Settings title to group favicon related settings together with a common heading. We don't want a description here.
+    $name = 'theme_ncmboost/faviconheading';
+    $title = get_string('faviconheadingsetting', 'theme_ncmboost', null, true);
+    $setting = new admin_setting_heading($name, $title, null);
+    $page->add($setting);
+
+    // Favicon upload.
+    $name = 'theme_ncmboost/favicon';
+    $title = get_string('faviconsetting', 'theme_ncmboost', null, true);
+    $description = get_string('faviconsetting_desc', 'theme_ncmboost', null, true);
+    $setting = new admin_setting_configstoredfile($name, $title, $description, 'favicon', 0,
+        array('maxfiles' => 1, 'accepted_types' => array('.ico', '.png')));
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Settings title to group footnote settings together with a common heading and description.
+    $name = 'theme_ncmboost/footnoteheading';
+    $title = get_string('footnoteheadingsetting', 'theme_ncmboost', null, true);
+    $description = get_string('footnoteheadingsetting_desc', 'theme_ncmboost', null, true);
+    $setting = new admin_setting_heading($name, $title, $description);
+    $page->add($setting);
+
+    // Footnote setting.
+    $name = 'theme_ncmboost/footnote';
+    $title = get_string('footnotesetting', 'theme_ncmboost', null, true);
+    $description = get_string('footnotesetting_desc', 'theme_ncmboost', null, true);
+    $setting = new admin_setting_confightmleditor($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Must add the page after defining all the settings!
     $settings->add($page);
 

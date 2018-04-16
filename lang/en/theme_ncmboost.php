@@ -83,3 +83,15 @@ $string['rawscsspre'] = 'Raw initial SCSS';
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
 // We need to include a lang string for each block region.
 $string['region-side-pre'] = 'Right';
+
+// ...Favicon.
+$string['faviconheadingsetting'] = 'Favicon';
+$string['faviconsetting'] = 'Favicon';
+$string['faviconsetting_desc'] = 'You can upload one image (.ico or .png format) that the browser will show as the favicon of your Moodle website.';
+
+// ...Footnote.
+$string['footnoteheadingsetting'] = 'Footnote';
+$string['footnoteheadingsetting_desc'] = 'The following setting allows to add an additional region for displaying a footnote.';
+$string['footnotesetting'] = 'Footnote';
+$string['footnotesetting_desc'] = 'Whatever you add to this textarea will be displayed at the end of the footer on every page that renders the theme standard footer (for the layouts "columns2" and "login"). Content in this area could be for example the copyright, the terms of use and the name of your organisation. <br/> If you want to remove the footnote again, just empty the text area.';
+

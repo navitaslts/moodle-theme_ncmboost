@@ -64,6 +64,44 @@ function theme_ncmboost_get_main_scss_content($theme) {
 }
 
 /**
+ * Implement pluginfile function to deliver files which are uploaded in theme settings
+ *
+ * @param stdClass $course course object
+ * @param stdClass $cm course module
+ * @param stdClass $context context object
+ * @param string $filearea file area
+ * @param array $args extra arguments
+ * @param bool $forcedownload whether or not force download
+ * @param array $options additional options affecting the file serving
+ * @return bool
+ */
+function theme_ncmboost_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
+    if ($context->contextlevel == CONTEXT_SYSTEM) {
+        $theme = theme_config::load('boost_campus');
+        // By default, theme files must be cache-able by both browsers and proxies.
+        // TODO: For new file areas: Check if the cacheability needs to be restricted.
+        if (!array_key_exists('cacheability', $options)) {
+            $options['cacheability'] = 'public';
+        }
+        if ($filearea === 'favicon') {
+            return $theme->setting_file_serve('favicon', $args, $forcedownload, $options);
+        } else if (s($filearea === 'logo' || $filearea === 'backgroundimage')) {
+            return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
+        } else if ($filearea === 'loginbackgroundimage') {
+            return $theme->setting_file_serve('loginbackgroundimage', $args, $forcedownload, $options);
+        } else if ($filearea === 'fontfiles') {
+            return $theme->setting_file_serve('fontfiles', $args, $forcedownload, $options);
+        } else if ($filearea === 'imageareaitems') {
+            return $theme->setting_file_serve('imageareaitems', $args, $forcedownload, $options);
+        } else {
+            send_file_not_found();
+        }
+    } else {
+        send_file_not_found();
+    }
+}
+
+/**
  * Copy the updated theme image to the correct location in dataroot for the image to be served
  * by /theme/image.php. Also clear theme caches.
  *
