@@ -33,6 +33,10 @@ $string['backgrounds'] = 'Backgrounds';
 $string['ncmbrandcolor'] = 'Brand colour';
 // The brand colour setting description.
 $string['ncmbrandcolor_desc'] = 'The accent colour.';
+// The key text colour setting.
+$string['ncmkeytxtcolor'] = 'Key text colour';
+// The key text colour setting description.
+$string['ncmkeytxtcolor_desc'] = 'The key text colour.';
 // A description shown in the admin theme selector.
 $string['choosereadme'] = 'Theme ncmboost is a child theme of Boost.';
 // Name of the settings pages.

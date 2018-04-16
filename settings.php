@@ -85,6 +85,14 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Variable $ncmkeytxt-color
+    $name = 'theme_ncmboost/ncmkeytxtcolor';
+    $title = get_string('ncmkeytxtcolor', 'theme_ncmboost');
+    $description = get_string('ncmkeytxtcolor_desc', 'theme_ncmboost');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Must add the page after defining all the settings!
     $settings->add($page);
 

@@ -132,6 +132,7 @@ function theme_ncmboost_get_pre_scss($theme) {
         // Config key => [variableName, ...].
         'brandcolor' => ['brand-primary'],
         'ncmbrandcolor' => ['ncm-brandcolor'],
+        'ncmkeytxtcolor' => ['ncm-keytxtcolor']
     ];
 
     // Prepend variables first.

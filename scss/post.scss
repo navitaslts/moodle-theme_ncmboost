@@ -31,3 +31,13 @@ body {
 header.bordertop-brand {
     border-top:5px solid $ncm-brandcolor;
 }
+
+div.course-content h3.sectionname > span > a,
+div.course-info-container a,
+li.nav-item a[role=tab],
+li.breadcrumb-item a {
+    color: $ncm-keytxtcolor; 
+}
+
+
+
