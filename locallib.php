@@ -137,9 +137,6 @@ function theme_ncmboost_set_node_on_top(flat_navigation $flatnav, $nodename, $be
     $flatnav->remove($nodename);
     // Add the saved site home node before the $beforenode.
     $flatnav->add($pageflatnav, $beforenode->key);
-    echo "<pre>";
-    var_dump($beforenode->key);
-    echo "</pre>";
 
     // Return the modified changes.
     return $flatnav;
