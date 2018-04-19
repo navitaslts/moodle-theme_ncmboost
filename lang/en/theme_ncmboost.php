@@ -95,3 +95,6 @@ $string['footnoteheadingsetting_desc'] = 'The following setting allows to add an
 $string['footnotesetting'] = 'Footnote';
 $string['footnotesetting_desc'] = 'Whatever you add to this textarea will be displayed at the end of the footer on every page that renders the theme standard footer (for the layouts "columns2" and "login"). Content in this area could be for example the copyright, the terms of use and the name of your organisation. <br/> If you want to remove the footnote again, just empty the text area.';
 
+// ...Course edit button.
+$string['courseeditbuttonsetting'] = 'Course edit button';
+$string['courseeditbuttonsetting_desc'] = 'With this setting you can add an additional course edit on / off button to the course header for faster accessibility of this often used function.';

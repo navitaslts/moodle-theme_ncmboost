@@ -81,7 +81,7 @@ function theme_ncmboost_pluginfile($course, $cm, $context, $filearea, $args, $fo
         // By default, theme files must be cache-able by both browsers and proxies.
         // TODO: For new file areas: Check if the cacheability needs to be restricted.
         if (!array_key_exists('cacheability', $options)) {
-            $options['cacheability'] = 'public';
+            $options['cacheability'] = 'publi`c';
         }
         if ($filearea === 'favicon') {
             return $theme->setting_file_serve('favicon', $args, $forcedownload, $options);

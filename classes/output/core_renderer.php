@@ -60,6 +60,25 @@ defined('MOODLE_INTERNAL') || die;
 class core_renderer extends \theme_boost\output\core_renderer {
 
     /**
+     * Override to display an edit button again by calling the parent function
+     * in core/core_renderer because theme_boost's function returns an empty
+     * string and therefore displays nothing.
+     * @param moodle_url $url The current course url.
+     * @return \core_renderer::edit_button Moodle edit button.
+     */
+    public function edit_button(moodle_url $url) {
+        // MODIFICATION START.
+        // If setting editbuttonincourseheader ist checked give out the edit on / off button in course header.
+        if (get_config('theme_ncmboost', 'courseeditbutton') == '1') {
+            return \core_renderer::edit_button($url);
+        }
+        // MODIFICATION END.
+        /* ORIGINAL START.
+        return '';
+        ORIGINAL END. */
+    }
+
+    /**
      * Override to be able to use uploaded images from admin_setting as well.
      *
      * Returns the URL for the favicon.
