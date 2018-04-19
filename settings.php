@@ -93,6 +93,13 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Variable $ncmkeytxt-color
+    $name = 'theme_ncmboost/ncmlinkcolor';
+    $title = get_string('ncmlinkcolor', 'theme_ncmboost');
+    $description = get_string('ncmlinkcolor_desc', 'theme_ncmboost');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
 
     // Settings title to group favicon related settings together with a common heading. We don't want a description here.
     $name = 'theme_ncmboost/faviconheading';

@@ -81,7 +81,7 @@ function theme_ncmboost_pluginfile($course, $cm, $context, $filearea, $args, $fo
         // By default, theme files must be cache-able by both browsers and proxies.
         // TODO: For new file areas: Check if the cacheability needs to be restricted.
         if (!array_key_exists('cacheability', $options)) {
-            $options['cacheability'] = 'publi`c';
+            $options['cacheability'] = 'public';
         }
         if ($filearea === 'favicon') {
             return $theme->setting_file_serve('favicon', $args, $forcedownload, $options);
@@ -170,7 +170,8 @@ function theme_ncmboost_get_pre_scss($theme) {
         // Config key => [variableName, ...].
         //'brandcolor' => ['brand-primary'],
         'ncmbrandcolor' => ['ncm-brandcolor'],
-        'ncmkeytxtcolor' => ['ncm-keytxtcolor']
+        'ncmkeytxtcolor' => ['ncm-keytxtcolor'],
+        'ncmlinkcolor' => ['ncm-linkcolor']
     ];
 
     // Prepend variables first.

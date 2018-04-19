@@ -37,6 +37,10 @@ $string['ncmbrandcolor_desc'] = 'The accent colour.';
 $string['ncmkeytxtcolor'] = 'Key text colour';
 // The key text colour setting description.
 $string['ncmkeytxtcolor_desc'] = 'The key text colour.';
+// The key text colour setting.
+$string['ncmlinkcolor'] = 'Link colour';
+// The key text colour setting description.
+$string['ncmlinkcolor_desc'] = 'The Link colour.';
 // A description shown in the admin theme selector.
 $string['choosereadme'] = 'Theme ncmboost is a child theme of Boost.';
 // Name of the settings pages.
