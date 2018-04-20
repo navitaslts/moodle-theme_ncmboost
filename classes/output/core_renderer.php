@@ -101,4 +101,17 @@ class core_renderer extends \theme_boost\output\core_renderer {
     }
 
 
+    /**
+     * Whether we should display the logo in the navbar.
+     *
+     * We will when there are no main logos, and we have compact logo.
+     *
+     * @return bool
+     */
+    public function should_display_navbar_logo() {
+        $logo = $this->get_compact_logo_url();
+        return !empty($logo) ;//&& !$this->should_display_main_logo();
+    }
+
+
 }

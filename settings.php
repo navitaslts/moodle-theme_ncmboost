@@ -131,6 +131,13 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Settings title to group footnote settings together with a common heading and description.
+    $name = 'theme_ncmboost/courseeditheading';
+    $title = get_string('courseeditheadingsetting', 'theme_ncmboost', null, true);
+    $description = get_string('footnoteheadingsetting_desc', 'theme_ncmboost', null, true);
+    $setting = new admin_setting_heading($name, $title, $description);
+    $page->add($setting);
+
     // Setting for displaying edit on / off button addionally in course header.
     $name = 'theme_ncmboost/courseeditbutton';
     $title = get_string('courseeditbuttonsetting', 'theme_ncmboost', null, true);

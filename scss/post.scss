@@ -30,6 +30,10 @@ body {
 header.bordertop-brand {
     border-top:5px solid $ncm-brandcolor;
 }
+header.navbar-light .navbar-brand {
+    background-color : $ncm-brandcolor;
+}
+
 div.courses h3.coursename > a,
 div.course-content ul.weeks h3.sectionname > span > a,
 div.course-content ul.topics h3.sectionname > span > a,
