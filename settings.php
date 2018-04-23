@@ -93,6 +93,14 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Variable $ncmbtn-primary
+    $name = 'theme_ncmboost/ncmbtnprimarycolor';
+    $title = get_string('ncmbtnprimarycolor', 'theme_ncmboost');
+    $description = get_string('ncmbtnprimarycolor_desc', 'theme_ncmboost');
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Variable $ncmkeytxt-color
     $name = 'theme_ncmboost/ncmlinkcolor';
     $title = get_string('ncmlinkcolor', 'theme_ncmboost');
@@ -127,14 +135,15 @@ if ($ADMIN->fulltree) {
     $name = 'theme_ncmboost/footnote';
     $title = get_string('footnotesetting', 'theme_ncmboost', null, true);
     $description = get_string('footnotesetting_desc', 'theme_ncmboost', null, true);
-    $setting = new admin_setting_confightmleditor($name, $title, $description, '');
+    $default_value = get_string('footnotesetting_default', 'theme_ncmboost', null, true);
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default_value);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
     // Settings title to group footnote settings together with a common heading and description.
     $name = 'theme_ncmboost/courseeditheading';
     $title = get_string('courseeditheadingsetting', 'theme_ncmboost', null, true);
-    $description = get_string('footnoteheadingsetting_desc', 'theme_ncmboost', null, true);
+    $description = get_string('courseeditbuttonsetting_desc', 'theme_ncmboost', null, true);
     $setting = new admin_setting_heading($name, $title, $description);
     $page->add($setting);
 

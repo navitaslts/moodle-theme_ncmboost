@@ -98,8 +98,11 @@ $string['footnoteheadingsetting'] = 'Footnote';
 $string['footnoteheadingsetting_desc'] = 'The following setting allows to add an additional region for displaying a footnote.';
 $string['footnotesetting'] = 'Footnote';
 $string['footnotesetting_desc'] = 'Whatever you add to this textarea will be displayed at the end of the footer on every page that renders the theme standard footer (for the layouts "columns2" and "login"). Content in this area could be for example the copyright, the terms of use and the name of your organisation. <br/> If you want to remove the footnote again, just empty the text area.';
-
+$string['footnotesetting_default'] = '<p>Copyright Navitas 2018</p>';
 // ...Course edit button.
 $string['courseeditheadingsetting'] = 'Course Edit Button';
 $string['courseeditbuttonsetting'] = 'Course edit button';
 $string['courseeditbuttonsetting_desc'] = 'With this setting you can add an additional course edit on / off button to the course header for faster accessibility of this often used function.';
+// ....Button Primary.
+$string['ncmbtnprimarycolor'] = 'Button Primary Colour';
+$string['ncmbtnprimarycolor_desc'] = 'The button primary colour.';

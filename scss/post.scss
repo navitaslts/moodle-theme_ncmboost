@@ -27,11 +27,9 @@ body {
     background-size: cover;
 }
 
+// Create a border at the top of the page in the brand color
 header.bordertop-brand {
-    border-top:5px solid $ncm-brandcolor;
-}
-header.navbar-light .navbar-brand {
-    background-color : $ncm-brandcolor;
+    border-top:5px solid $brand-primary;
 }
 
 div.courses h3.coursename > a,
@@ -57,18 +55,19 @@ div.course-content ul.weeks .current::before {
     border: none;
 }
 
-.usermenu a {
-    color: rgba(0,0,0,.535);
+.usermenu a,
+.usermenu a .icon,
+header.navbar-light .navbar-nav .nav-link {
+    color:#545454;
 }
 
+.usermenu a:focus, .usermenu a:hover,
+header a.dropdown-item:focus, a.dropdown-item:hover,
+header a.dropdown-item:focus>i.icon, header a.dropdown-item:hover>i.icon,
 header.navbar-light .navbar-nav .nav-link:focus, 
 header.navbar-light .navbar-nav .nav-link:hover,
 header.navbar-light .navbar-nav .open>.nav-link,
 header.navbar-light .navbar-nav .open>.nav-link:focus,
 header.navbar-light .navbar-nav .open>.nav-link:hover {
     color:#262626;
-}
-
-a {
-    color: $ncm-linkcolor;
 }

@@ -168,10 +168,10 @@ function theme_ncmboost_get_pre_scss($theme) {
     $scss = '';
     $configurable = [
         // Config key => [variableName, ...].
-        //'brandcolor' => ['brand-primary'],
-        'ncmbrandcolor' => ['ncm-brandcolor'],
+        'ncmbrandcolor' => ['brand-primary'],
         'ncmkeytxtcolor' => ['ncm-keytxtcolor'],
-        'ncmlinkcolor' => ['ncm-linkcolor']
+        'ncmlinkcolor' => ['link-color'],
+        'ncmbtnprimarycolor' => ['btn-primary-bg']
     ];
 
     // Prepend variables first.
