@@ -59,7 +59,6 @@ $templatecontext = [
 ];
 
 // MODIDFICATION START.
-//$templatecontext['flatnavigation'] = $PAGE->flatnav;
 $templatecontext['flatnavigation'] = theme_ncmboost_process_flatnav($PAGE->flatnav);
 // MODIFICATION END.
 echo $OUTPUT->render_from_template('theme_ncmboost/columns2', $templatecontext);

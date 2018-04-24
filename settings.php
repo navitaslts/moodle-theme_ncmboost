@@ -59,22 +59,12 @@ if ($ADMIN->fulltree) {
 
     // Preset files setting.
     $name = 'theme_ncmboost/presetfiles';
-    $title = get_string('presetfiles','theme_ncmboost');
+    $title = get_string('presetfiles', 'theme_ncmboost');
     $description = get_string('presetfiles_desc', 'theme_ncmboost');
 
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'preset', 0,
         array('maxfiles' => 20, 'accepted_types' => array('.scss')));
     $page->add($setting);
-
-
-    // Variable $ncmbrand-color.
-    // We use an empty default value because the default colour should come from the preset.
-    // $name = 'theme_ncmboost/brandcolor';
-    // $title = get_string('brandcolor', 'theme_ncmboost');
-    // $description = get_string('brandcolor_desc', 'theme_ncmboost');
-    // $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
-    // $setting->set_updatedcallback('theme_reset_all_caches');
-    // $page->add($setting);
 
     // Variable $ncmbrand-color.
     // We use an empty default value because the default colour should come from the preset.
@@ -85,7 +75,7 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Variable $ncmkeytxt-color
+    // Variable $ncmkeytxt-color.
     $name = 'theme_ncmboost/ncmkeytxtcolor';
     $title = get_string('ncmkeytxtcolor', 'theme_ncmboost');
     $description = get_string('ncmkeytxtcolor_desc', 'theme_ncmboost');
@@ -93,7 +83,7 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Variable $ncmbtn-primary
+    // Variable $ncmbtn-primary.
     $name = 'theme_ncmboost/ncmbtnprimarycolor';
     $title = get_string('ncmbtnprimarycolor', 'theme_ncmboost');
     $description = get_string('ncmbtnprimarycolor_desc', 'theme_ncmboost');
@@ -101,12 +91,12 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
-    // Variable $ncmkeytxt-color
+    // Variable $ncmkeytxt-color.
     $name = 'theme_ncmboost/ncmlinkcolor';
     $title = get_string('ncmlinkcolor', 'theme_ncmboost');
     $description = get_string('ncmlinkcolor_desc', 'theme_ncmboost');
-    $defaut_value = '#03A53E';
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, $defaut_value);
+    $defaut = '#03A53E';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $defaut);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
@@ -136,8 +126,8 @@ if ($ADMIN->fulltree) {
     $name = 'theme_ncmboost/footnote';
     $title = get_string('footnotesetting', 'theme_ncmboost', null, true);
     $description = get_string('footnotesetting_desc', 'theme_ncmboost', null, true);
-    $default_value = get_string('footnotesetting_default', 'theme_ncmboost', null, true);
-    $setting = new admin_setting_confightmleditor($name, $title, $description, $default_value);
+    $default = get_string('footnotesetting_default', 'theme_ncmboost', null, true);
+    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 

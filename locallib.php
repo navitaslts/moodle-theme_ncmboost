@@ -33,88 +33,81 @@
  */
 function theme_ncmboost_process_flatnav(flat_navigation $flatnav) {
     global $USER;
-    // If the setting defaulthomepageontop is enabled.
-    //if (get_config('theme_ncmboost_campus', 'defaulthomepageontop') == 'yes') {
-        // Only proceed processing if we are in a course context.
-        if (($coursehomenode = $flatnav->find('coursehome', global_navigation::TYPE_CUSTOM)) != false) {
-            // If the site home is set as the deafult homepage by the admin.
-            if (get_config('core', 'defaulthomepage') == HOMEPAGE_SITE) {
+    // Only proceed processing if we are in a course context.
+    if (($coursehomenode = $flatnav->find('coursehome', global_navigation::TYPE_CUSTOM)) != false) {
+        // If the site home is set as the deafult homepage by the admin.
+        if (get_config('core', 'defaulthomepage') == HOMEPAGE_SITE) {
+            // Return the modified flat_navigtation.
+            $flatnavreturn = theme_ncmboost_set_node_on_top($flatnav, 'home', $coursehomenode);
+        } else if (get_config('core', 'defaulthomepage') == HOMEPAGE_MY) { // If the dashboard is set as the default homepage
+            // by the admin.
+            // Return the modified flat_navigtation.
+            $flatnavreturn = theme_ncmboost_set_node_on_top($flatnav, 'myhome', $coursehomenode);
+        } else if (get_config('core', 'defaulthomepage') == HOMEPAGE_USER) { // If the admin defined that the user can set
+            // the default homepage for himself.
+            // Site home.
+            if (get_user_preferences('user_home_page_preference', $USER) == 0) {
                 // Return the modified flat_navigtation.
                 $flatnavreturn = theme_ncmboost_set_node_on_top($flatnav, 'home', $coursehomenode);
-            } else if (get_config('core', 'defaulthomepage') == HOMEPAGE_MY) { // If the dashboard is set as the default homepage
-                // by the admin.
+            } else if (get_user_preferences('user_home_page_preference', $USER) == 1 || // Dashboard.
+                get_user_preferences('user_home_page_preference', $USER) == false) { // If no user preference is set,
+                // use the default value of core setting default homepage (Dashboard).
                 // Return the modified flat_navigtation.
                 $flatnavreturn = theme_ncmboost_set_node_on_top($flatnav, 'myhome', $coursehomenode);
-            } else if (get_config('core', 'defaulthomepage') == HOMEPAGE_USER) { // If the admin defined that the user can set
-                // the default homepage for himself.
-                // Site home.
-                if (get_user_preferences('user_home_page_preference', $USER) == 0) {
-                    // Return the modified flat_navigtation.
-                    $flatnavreturn = theme_ncmboost_set_node_on_top($flatnav, 'home', $coursehomenode);
-                } else if (get_user_preferences('user_home_page_preference', $USER) == 1 || // Dashboard.
-                    get_user_preferences('user_home_page_preference', $USER) == false) { // If no user preference is set,
-                    // use the default value of core setting default homepage (Dashboard).
-                    // Return the modified flat_navigtation.
-                    $flatnavreturn = theme_ncmboost_set_node_on_top($flatnav, 'myhome', $coursehomenode);
-                } else { // Should not happen.
-                    // Return the passed flat navigation without changes.
-                    $flatnavreturn = $flatnav;
-                }
             } else { // Should not happen.
                 // Return the passed flat navigation without changes.
                 $flatnavreturn = $flatnav;
             }
-        } else { // Not in course context.
+        } else { // Should not happen.
             // Return the passed flat navigation without changes.
             $flatnavreturn = $flatnav;
         }
-    //} else { // Defaulthomepageontop not enabled.
+    } else { // Not in course context.
         // Return the passed flat navigation without changes.
         $flatnavreturn = $flatnav;
-    //}
+    }
+    $flatnavreturn = $flatnav;
 
     // If the setting 'navdrawericonssetting' is enabled.
-    //if (get_config('theme_ncmboost_campus', 'navdrawericons') == 'yes') {
-        // Adding icons to flatnav nodes.
-        // Dashboard node.
-        if ($myhomenode = $flatnav->find('myhome', global_navigation::TYPE_SYSTEM)) {
-            $myhomenode->icon = new pix_icon('i/dashboard', '');
+    // Adding icons to flatnav nodes.
+    // Dashboard node.
+    if ($myhomenode = $flatnav->find('myhome', global_navigation::TYPE_SYSTEM)) {
+        $myhomenode->icon = new pix_icon('i/dashboard', '');
+    }
+    // Site home node.
+    if ($homenode = $flatnav->find('home', global_navigation::TYPE_SETTING)) {
+        $homenode->icon = new pix_icon('i/home', '');
+    }
+    // Site administration node.
+    if (($sitesettingsnode = $flatnav->find('sitesettings', global_navigation::TYPE_SITE_ADMIN))) {
+        $sitesettingsnode->icon = new pix_icon('t/preferences', '');
+    }
+    // Participants node.
+    if ($participantsnode = $flatnav->find('participants', global_navigation::TYPE_CONTAINER)) {
+        $participantsnode->icon = new pix_icon('i/users', '');
+    }
+    // Course section nodes.
+    if ($allsectionnodes = $flatnav->type(global_navigation::TYPE_SECTION)) {
+        foreach ($allsectionnodes as $n) {
+            $n->icon = new pix_icon('i/section', '');
         }
-        // Site home node.
-        if ($homenode = $flatnav->find('home', global_navigation::TYPE_SETTING)) {
-            $homenode->icon = new pix_icon('i/home', '');
+    }
+    // Calendar node.
+    if ($calendarnode = $flatnav->find('calendar', global_navigation::TYPE_CUSTOM)) {
+        $calendarnode->icon = new pix_icon('i/calendar', '');
+    }
+    // Private files node.
+    if ($privatefilesnode = $flatnav->find('privatefiles', global_navigation::TYPE_SETTING)) {
+        $privatefilesnode->icon = new pix_icon('i/privatefiles', '');
+    }
+    // My courses nodes.
+    if ($mycourses = $flatnav->type(global_navigation::TYPE_COURSE)) {
+        foreach ($mycourses as $n) {
+            $n->icon = new pix_icon('i/course', '');
+            // Remove existing indent to align these nodes' icons with the other nodes' icons.
+            $n->set_indent(false);
         }
-        // Site administration node.
-        if (($sitesettingsnode = $flatnav->find('sitesettings', global_navigation::TYPE_SITE_ADMIN))) {
-            $sitesettingsnode->icon = new pix_icon('t/preferences', '');
-        }
-        // Participants node.
-        if ($participantsnode = $flatnav->find('participants', global_navigation::TYPE_CONTAINER)) {
-            $participantsnode->icon = new pix_icon('i/users', '');
-        }
-        // Course section nodes.
-        if ($allsectionnodes = $flatnav->type(global_navigation::TYPE_SECTION)) {
-            foreach ($allsectionnodes as $n) {
-                $n->icon = new pix_icon('i/section', '');
-            }
-        }
-        // Calendar node.
-        if ($calendarnode = $flatnav->find('calendar', global_navigation::TYPE_CUSTOM)) {
-            $calendarnode->icon = new pix_icon('i/calendar', '');
-        }
-        // Private files node.
-        if ($privatefilesnode = $flatnav->find('privatefiles', global_navigation::TYPE_SETTING)) {
-            $privatefilesnode->icon = new pix_icon('i/privatefiles', '');
-        }
-        // My courses nodes.
-        if ($mycourses = $flatnav->type(global_navigation::TYPE_COURSE)) {
-            foreach ($mycourses as $n) {
-                $n->icon = new pix_icon('i/course', '');
-                // Remove existing indent to align these nodes' icons with the other nodes' icons.
-                $n->set_indent(false);
-            }
-        }
-    //}
+    }
     return $flatnavreturn;
 }
 

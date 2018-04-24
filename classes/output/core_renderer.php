@@ -110,7 +110,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      */
     public function should_display_navbar_logo() {
         $logo = $this->get_compact_logo_url();
-        return !empty($logo) ;//&& !$this->should_display_main_logo();
+        return !empty($logo);
     }
 
 
