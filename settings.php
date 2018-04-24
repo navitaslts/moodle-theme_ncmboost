@@ -105,7 +105,8 @@ if ($ADMIN->fulltree) {
     $name = 'theme_ncmboost/ncmlinkcolor';
     $title = get_string('ncmlinkcolor', 'theme_ncmboost');
     $description = get_string('ncmlinkcolor_desc', 'theme_ncmboost');
-    $setting = new admin_setting_configcolourpicker($name, $title, $description, '');
+    $defaut_value = '#03A53E';
+    $setting = new admin_setting_configcolourpicker($name, $title, $description, $defaut_value);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
