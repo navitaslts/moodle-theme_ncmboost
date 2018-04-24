@@ -33,11 +33,13 @@ header.bordertop-brand {
 }
 
 div.courses h3.coursename > a,
-div.course-content ul.weeks h3.sectionname > span > a,
-div.course-content ul.topics h3.sectionname > span > a,
+//div.course-content ul.weeks h3.sectionname > span > a,
+//div.course-content ul.topics h3.sectionname > span > a,
+div.course-content h3.sectionname > span > a,
+div.course-content ul.ctopics li.section .content .toggle span.the_toggle h3.sectionname,
 div.course-info-container a,
 li.nav-item a[role=tab],
-.grade-navigation li.nav-item a,
+.grade-navigation li.nav-item,
 li.breadcrumb-item a {
     color: $ncm-keytxtcolor; 
 }
