@@ -87,12 +87,10 @@ $string['rawscsspre'] = 'Raw initial SCSS';
 $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
 // We need to include a lang string for each block region.
 $string['region-side-pre'] = 'Right';
-
 // ...Favicon.
 $string['faviconheadingsetting'] = 'Favicon';
 $string['faviconsetting'] = 'Favicon';
 $string['faviconsetting_desc'] = 'You can upload one image (.ico or .png format) that the browser will show as the favicon of your Moodle website.';
-
 // ...Footnote.
 $string['footnoteheadingsetting'] = 'Footnote';
 $string['footnoteheadingsetting_desc'] = 'The following setting allows to add an additional region for displaying a footnote.';
@@ -103,6 +101,17 @@ $string['footnotesetting_default'] = '<p>Copyright Navitas 2018</p>';
 $string['courseeditheadingsetting'] = 'Course Edit Button';
 $string['courseeditbuttonsetting'] = 'Course edit button';
 $string['courseeditbuttonsetting_desc'] = 'With this setting you can add an additional course edit on / off button to the course header for faster accessibility of this often used function.';
+// ...Login Page Type.
+$string['loginpagetypeheading'] = 'Login Page Type';
+$string['loginpagetype'] = 'Login Page Type';
+$string['loginpagetype_desc'] = 'With this setting you can switch the type of the login page';
+$string['core'] = 'Core';
+$string['classic'] = 'Classic';
+$string['advanced'] = 'Advanced';
+$string['samlauthfirst'] = 'SAML Auth First';
+$string['manualauthoff'] = 'Manual Auth OFF';
+$string['manualaccounttitle'] = 'Manual Accounts Only';
 // ....Button Primary.
 $string['ncmbtnprimarycolor'] = 'Button Primary Colour';
 $string['ncmbtnprimarycolor_desc'] = 'The button primary colour.';
+

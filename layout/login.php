@@ -17,7 +17,7 @@
 /**
  * Theme Boost Campus Login - Layout file.
  *
- * @package   theme_ncnboost
+ * @package   theme_ncmboost
  * @copyright 2018 Nicolas Jourdain
  * @copyright based on code from theme_boost by Damyon Wiese
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
@@ -33,8 +33,9 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes
 ];
 
-echo $OUTPUT->render_from_template('theme_ncmboost/login', $templatecontext);
 
+echo $OUTPUT->render_from_template('theme_ncmboost/login', $templatecontext);
+$PAGE->requires->js_call_amd('theme_ncmboost/ncmlogin', 'init');
 // MOFIFICATION START.
 // Include own layout file for the footnote region.
 // The theme_boost/login template already renders the standard footer.

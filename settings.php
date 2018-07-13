@@ -146,6 +146,28 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Login Page Type Heading.
+    $name = 'theme_ncmboost/loginpagetypeheading';
+    $title = get_string('loginpagetypeheading', 'theme_ncmboost', null, true);
+    $description = get_string('loginpagetype_desc', 'theme_ncmboost', null, true);
+    $setting = new admin_setting_heading($name, $title, $description);
+    $page->add($setting);
+
+    $options = array(
+        'CORE' => get_string('core', 'theme_ncmboost'),
+        'CLASSIC' => get_string('classic', 'theme_ncmboost'),
+        'SAMLAUTHFIRST' => get_string('samlauthfirst', 'theme_ncmboost'),
+    );
+
+    $setting = new admin_setting_configselect('theme_ncmboost/loginpagetype',
+        get_string('loginpagetype', 'theme_ncmboost'),
+        null,
+        'C',
+        $options
+    );
+    $page->add($setting);
+
+
     // Must add the page after defining all the settings!
     $settings->add($page);
 
