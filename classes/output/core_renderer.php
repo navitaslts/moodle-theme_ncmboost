@@ -138,7 +138,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
         $context->sitename = format_string($SITE->fullname, true,
             ['context' => context_course::instance(SITEID), "escape" => false]
         );
-        
+
         // Get the Login Page Type.
         $loginpagetype = get_config('theme_ncmboost', 'loginpagetype');
         if ($loginpagetype == 'SAMLAUTHFIRST') {

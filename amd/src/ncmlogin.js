@@ -1,5 +1,5 @@
 /*
- * @package    mod_ncmzoom
+ * @package    theme_ncmboost
  * @copyright  2018 Nicolas Jourdain
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -7,7 +7,6 @@
  * @module themencmboost
  */
 /* jshint unused:false */
-window.console.log('started v5');
 define(['jquery'], function($) {
   return {
     init: function() {
@@ -44,16 +43,9 @@ define(['jquery'], function($) {
             $('#login-reset').hide();
             $('#login-username').show();
           });
-
-
-
-        window.console.log('Hello World!');
-        //alert("Hello World!");
         // Put whatever you like here. $ is available
         // to you as normal.
       });
     }
   };
 });
-
-window.console.log('Finished');
