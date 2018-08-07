@@ -191,3 +191,15 @@ function theme_ncmboost_get_pre_scss($theme) {
 
     return $scss;
 }
+
+/**
+ * Get icon mapping for font-awesome.
+ */
+function theme_ncmboost_get_fontawesome_icon_map() {
+    return [
+        'core:i/course' => 'fa-graduation-cap',
+        'core:i/home' => 'fa-home',
+        'core:i/privatefiles' => 'fa-file-o',
+        'core:i/section' => 'fa-folder-o'
+    ];
+}
