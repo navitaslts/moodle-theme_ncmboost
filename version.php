@@ -26,10 +26,10 @@
 defined('MOODLE_INTERNAL') || die();
 
 // This is the version of the plugin.
-$plugin->version = 2018080700;
+$plugin->version = 2018080900;
 
 // This is the version of Moodle this plugin requires.
-$plugin->requires = 2016112900.00;
+$plugin->requires = 2018050800;
 
 // This is the component name of the plugin - it always starts with 'theme_'
 // for themes and should be the same as the name of the folder.
@@ -37,7 +37,7 @@ $plugin->component = 'theme_ncmboost';
 
 // This is a list of plugins, this plugin depends on (and their versions).
 $plugin->dependencies = [
-    'theme_boost' => 2016102100
+        'theme_boost' => 2018051400
 ];
 
 // This is a stable release.
