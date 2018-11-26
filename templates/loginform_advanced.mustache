@@ -39,6 +39,8 @@
     * errorformatted - Formatted error,
     * logourl - Flag, logo url,
     * sitename - Name of site.
+    * logintoken - Random token to protect login request.
+
 
     Example context (json):
     {
@@ -88,6 +90,7 @@
         "errorformatted": "",
         "logourl": false,
         "sitename": "Beer & Chips"
+        "logintoken": "randomstring"
     }
 }}
 
@@ -201,6 +204,8 @@
                             <input type="password" name="password" id="password" value=""
                                 class="form-control"
                                 placeholder={{#quote}}{{#str}}password{{/str}}{{/quote}}>
+                            {{! CSRF protection }}
+                            <input type="hidden" name="logintoken" value="{{logintoken}}">
 
                             {{#rememberusername}}
                                 <div class="rememberpass m-t-1 text-center">
