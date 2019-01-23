@@ -1,3 +1,5 @@
+// $navbar-height: 55px !default;
+
 // Post SCSS for the theme.
 body.pagelayout-login {
     background-image: url([[pix:theme_ncmboost|loginbackgroundimage]]);
@@ -28,7 +30,7 @@ body {
 }
 
 // Create a border at the top of the page in the brand color
-header.bordertop-brand {
+nav.bordertop-brand {
     border-top:5px solid $brand-primary;
 }
 
