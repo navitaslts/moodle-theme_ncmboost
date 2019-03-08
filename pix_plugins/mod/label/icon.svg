@@ -1,1 +1,17 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><defs><style>.cls-1{fill:#06c;}.cls-2{fill:#fff;}</style></defs><title>48px_sourcefile_20170718_multi</title><circle class="cls-1" cx="24.14" cy="24" r="24"/><path id="path1" class="cls-2" d="M20,17.7a2,2,0,0,0-1.42,3.43,2,2,0,0,0,2.85,0,2,2,0,0,0,0-2.85A2,2,0,0,0,20,17.7Zm0-1.84a3.84,3.84,0,0,1,2.72,6.56,3.85,3.85,0,0,1-5.44,0A3.84,3.84,0,0,1,20,15.86Zm3-2.89-8.87.88-.88,8.87,15,15L38.07,28Zm.68-1.91L40.64,28,28.31,40.31,11.39,23.38l1.13-11.21Z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="20223 4202 24 24">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #2c84c8;
+      }
+
+      .cls-2 {
+        opacity: 0.25;
+      }
+    </style>
+  </defs>
+  <g id="Label" transform="translate(19549 2200)">
+    <path id="tag-solid" class="cls-1" d="M0,5.909V1.125A1.125,1.125,0,0,1,1.125,0H5.909a1.125,1.125,0,0,1,.8.33L11.67,5.3a1.125,1.125,0,0,1,0,1.591L6.886,11.67a1.125,1.125,0,0,1-1.591,0L.33,6.7a1.125,1.125,0,0,1-.33-.8ZM2.625,1.5A1.125,1.125,0,1,0,3.75,2.625,1.125,1.125,0,0,0,2.625,1.5Z" transform="translate(680 2008)"/>
+    <rect id="Rectangle_148" data-name="Rectangle 148" class="cls-2" width="24" height="24" transform="translate(674 2002)"/>
+  </g>
+</svg>

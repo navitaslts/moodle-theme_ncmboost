@@ -34,6 +34,7 @@ body {
 // Create a border at the top of the page in the brand color
 nav.bordertop-brand {
     border-top:5px solid $brand-primary;
+    // border-top:10px solid var(--brandprimary);
 }
 
 div.courses h3.coursename > a,
