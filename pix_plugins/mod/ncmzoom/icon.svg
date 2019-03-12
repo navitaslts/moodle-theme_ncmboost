@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5043 6695 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #138de7;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Zoom" transform="translate(-5416 6364)">
+    <rect id="Rectangle_149" data-name="Rectangle 149" class="cls-1" width="24" height="24" transform="translate(373 331)"/>
+    <path id="video-solid" class="cls-2" d="M7,64H1a1,1,0,0,0-1,1V71a1,1,0,0,0,1,1H7a1,1,0,0,0,1-1V65A1,1,0,0,0,7,64Zm3.946.785L8.667,66.36V69.64l2.283,1.573A.668.668,0,0,0,12,70.675V65.323A.668.668,0,0,0,10.95,64.785Z" transform="translate(379 275)"/>
+  </g>
+</svg>

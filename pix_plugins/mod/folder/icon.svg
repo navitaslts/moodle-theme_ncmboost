@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="20223 4168 24 24">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5043 6455 24 24">
   <defs>
     <style>
       .cls-1, .cls-2 {
         fill: #2c84c8;
       }
 
-      .cls-2 {
+      .cls-1 {
         opacity: 0.25;
       }
     </style>
   </defs>
-  <g id="Folder" transform="translate(19677 2295)">
-    <path id="folder-solid" class="cls-1" d="M14.5,66h-6l-2-2h-5A1.5,1.5,0,0,0,0,65.5v9A1.5,1.5,0,0,0,1.5,76h13A1.5,1.5,0,0,0,16,74.5v-7A1.5,1.5,0,0,0,14.5,66Z" transform="translate(549.9 1815)"/>
-    <rect id="Rectangle_147" data-name="Rectangle 147" class="cls-2" width="24" height="24" transform="translate(546 1873)"/>
+  <g id="Folder" transform="translate(-5589 4582)">
+    <rect id="Rectangle_147" data-name="Rectangle 147" class="cls-1" width="24" height="24" transform="translate(546 1873)"/>
+    <path id="folder-solid" class="cls-2" d="M10.875,65.5h-4.5L4.875,64H1.125A1.125,1.125,0,0,0,0,65.125v6.75A1.125,1.125,0,0,0,1.125,73h9.75A1.125,1.125,0,0,0,12,71.875v-5.25A1.125,1.125,0,0,0,10.875,65.5Z" transform="translate(551.9 1817)"/>
   </g>
 </svg>

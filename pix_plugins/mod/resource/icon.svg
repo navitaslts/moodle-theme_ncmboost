@@ -1,1 +1,17 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><defs><style>.cls-1{fill:#06c;}.cls-2{fill:#fff;}</style></defs><title>48px_sourcefile_20170718_multi</title><circle class="cls-1" cx="24" cy="24" r="24"/><path id="path1" class="cls-2" d="M18.52,27.66h6.4a.91.91,0,0,1,0,1.83h-6.4a.91.91,0,0,1,0-1.83Zm0-3.66h8.23a.91.91,0,1,1,0,1.83H18.52a.91.91,0,0,1,0-1.83Zm0-3.66h11a.91.91,0,1,1,0,1.83h-11a.91.91,0,0,1,0-1.83ZM28.57,12.5V15.8h3.31ZM14.86,11.2V36.8H33.14V17.63h-6.4V11.2Zm0-1.83H28L35,16.31V36.8a1.83,1.83,0,0,1-1.83,1.83H14.86A1.83,1.83,0,0,1,13,36.8V11.2A1.83,1.83,0,0,1,14.86,9.38Z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5043 6557 24 24">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #2c84c8;
+      }
+
+      .cls-1 {
+        opacity: 0.25;
+      }
+    </style>
+  </defs>
+  <g id="File" transform="translate(-5416 6364)">
+    <rect id="Rectangle_149" data-name="Rectangle 149" class="cls-1" width="24" height="24" transform="translate(373 193)"/>
+    <path id="file-solid" class="cls-2" d="M5.25,3.188V0H.563A.561.561,0,0,0,0,.563V11.438A.561.561,0,0,0,.563,12H8.438A.561.561,0,0,0,9,11.438V3.75H5.813A.564.564,0,0,1,5.25,3.188ZM9,2.857V3H6V0h.143a.562.562,0,0,1,.4.164l2.295,2.3A.561.561,0,0,1,9,2.857Z" transform="translate(380.5 199)"/>
+  </g>
+</svg>
