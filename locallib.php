@@ -102,8 +102,6 @@ function theme_ncmboost_process_flatnav(flat_navigation $flatnav) {
     if ($mycourses = $flatnav->type(global_navigation::TYPE_COURSE)) {
         foreach ($mycourses as $n) {
             $n->icon = new pix_icon('i/course', '');
-            // Remove existing indent to align these nodes' icons with the other nodes' icons.
-            $n->set_indent(false);
         }
     }
     return $flatnavreturn;
