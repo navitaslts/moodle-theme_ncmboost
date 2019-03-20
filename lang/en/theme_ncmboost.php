@@ -109,6 +109,7 @@ $string['core'] = 'Core';
 $string['classic'] = 'Classic';
 $string['advanced'] = 'Advanced';
 $string['samlauthfirst'] = 'SAML Auth First';
+$string['tenlogin'] = 'TEN Login';
 $string['manualauthoff'] = 'Manual Auth OFF';
 $string['manualaccounttitle'] = 'Manual Accounts Only';
 // ....Button Primary.

@@ -70,7 +70,6 @@ class course_renderer extends \core_course_renderer {
         return $this->output->render_from_template('core_course/activity_navigation', $data);
     }
 
-
     /**
      * Renders html to display a name with the link to the course module on a course page
      *
@@ -112,7 +111,6 @@ class course_renderer extends \core_course_renderer {
         // Get on-click attribute value if specified and decode the onclick - it
         // has already been encoded for display (puke).
         $onclick = htmlspecialchars_decode($mod->onclick, ENT_QUOTES);
-
         // Display link itself.
         $activitylink = html_writer::empty_tag('img', array('src' => $mod->get_icon_url(),
                 'class' => 'iconlarge activityicon', 'alt' => ' ', 'role' => 'presentation')) .
@@ -127,7 +125,6 @@ class course_renderer extends \core_course_renderer {
         }
         return $output;
     }
-
 
     /**
      * Renders html for completion box on course page

@@ -141,16 +141,25 @@ class core_renderer extends \theme_boost\output\core_renderer {
 
         // Get the Login Page Type.
         $loginpagetype = get_config('theme_ncmboost', 'loginpagetype');
-        if ($loginpagetype == 'SAMLAUTHFIRST') {
-            $context->manualaccounttitle = get_string('manualaccounttitle', 'theme_ncmboost');
-            return $this->render_from_template('theme_ncmboost/loginform_samlauthfirst', $context);
-        } else if ($loginpagetype == 'CLASSIC') {
-            return $this->render_from_template('theme_ncmboost/loginform_classic', $context);
-        } else if ($loginpagetype == 'ADVANCED') {
-            return $this->render_from_template('theme_ncmboost/loginform_advanced', $context);
-        } else {
-            return $this->render_from_template('core/loginform', $context);
+
+        switch($loginpagetype) {
+            case 'SAMLAUTHFIRST':
+                $context->manualaccounttitle = get_string('manualaccounttitle', 'theme_ncmboost');
+                return $this->render_from_template('theme_ncmboost/loginform_samlauthfirst', $context);
+                break;
+            case 'CLASSIC':
+                return $this->render_from_template('theme_ncmboost/loginform_classic', $context);
+                break;
+            case 'ADVANCED':
+                return $this->render_from_template('theme_ncmboost/loginform_advanced', $context);
+                break;
+            case 'TEN':
+                return $this->render_from_template('theme_ncmboost/loginform_ten', $context);
+                break;
+            default:
+                return $this->render_from_template('core/loginform', $context);
         }
+
         // MODIFICATION END.
         /* ORIGINAL START.
         return $this->render_from_template('core/loginform', $context);
