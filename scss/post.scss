@@ -106,3 +106,9 @@ header.navbar-light .navbar-nav .open>.nav-link:hover {
 .path-mod-assign td.submissiongraded, .path-mod-assign div.submissiongraded {
     background-color: var(--success);
 }
+
+.section .activity .availabilityinfo,
+.section .activity .contentafterlink {
+    margin-top: 0.5em;
+    margin-left: 41px;
+}
