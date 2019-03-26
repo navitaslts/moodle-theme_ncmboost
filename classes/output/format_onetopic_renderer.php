@@ -414,7 +414,7 @@ class format_onetopic_renderer extends \format_onetopic_renderer {
 
         // Display section bottom navigation.
         $sectionbottomnav = '';
-        $sectionbottomnav .= html_writer::start_tag('div', array('class' => 'section-navigation mdl-bottom nico-333'));
+        $sectionbottomnav .= html_writer::start_tag('div', array('class' => 'section-navigation mdl-bottom'));
         $sectionbottomnav .= html_writer::tag('span', $sectionnavlinks['previous'], array('class' => 'mdl-left'));
         $sectionbottomnav .= html_writer::tag('span', $sectionnavlinks['next'], array('class' => 'mdl-right'));
         $sectionbottomnav .= html_writer::end_tag('div');
