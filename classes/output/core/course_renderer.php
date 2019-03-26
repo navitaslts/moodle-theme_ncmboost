@@ -68,6 +68,7 @@ class course_renderer extends \core_course_renderer {
 
         $data = $page->export_for_template($this->output);
 
+        // Max lenght of the text.
         $textlength = 20;
         
         if (isset($data->prevlink)) {
@@ -78,7 +79,12 @@ class course_renderer extends \core_course_renderer {
             foreach ($data->prevlink->attributes as $key => $attribute) {
                 if ($attribute['name'] === 'title') {
                     // Build new text and add text-icon at the beginning.
-                    $data->prevlink->text = $OUTPUT->larrow() . ' ' . substr($attribute['value'], 0, $textlength);
+                    $data->prevlink->text = substr($attribute['value'], 0, $textlength);
+                    // Test if '...' are needed
+                    if ($data->prevlink->text !== $attribute['value']) {
+                        $data->prevlink->text .= '...';
+                    }
+                    $data->prevlink->text = $OUTPUT->larrow() . ' ' . $data->prevlink->text;
                 }
             }
         }
@@ -90,7 +96,12 @@ class course_renderer extends \core_course_renderer {
             foreach ($data->nextlink->attributes as $key => $attribute) {
                 if ($attribute['name'] === 'title') {
                     // Build new text and add text-icon at the end.
-                    $data->nextlink->text = substr($attribute['value'], 0, $textlength) . ' ' . $OUTPUT->rarrow();
+                    $data->nextlink->text = substr($attribute['value'], 0, $textlength);
+                    // Test if '...' are needed
+                    if ($data->nextlink->text !== $attribute['value']) {
+                        $data->nextlink->text .= '...';
+                    }
+                    $data->nextlink->text .= ' ' . $OUTPUT->rarrow();
                 }
             }
         }
