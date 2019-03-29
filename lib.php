@@ -167,16 +167,11 @@ function theme_ncmboost_get_pre_scss($theme) {
     $scss = '';
     $configurable = [
         // Config key => [variableName, ...].
-        //'ncmbrandcolor' => ['brand-primary'],
         'ncmbrandcolor' => ['primary'],
         'ncmkeytxtcolor' => ['ncm-keytxtcolor'],
         'ncmlinkcolor' => ['link-color'],
         'ncmbtnprimarycolor' => ['btn-primary-bg']
     ];
-
-    // echo "<pre>";
-    // print_r($configurable);
-    // echo "</pre>";
 
     // Prepend variables first.
     foreach ($configurable as $configkey => $targets) {

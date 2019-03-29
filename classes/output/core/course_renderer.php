@@ -1,5 +1,4 @@
 <?php
-
 // This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
@@ -16,20 +15,6 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Renderer for use with the course section and all the goodness that falls
- * within it.
- *
- * This renderer should contain methods useful to courses, and categories.
- *
- * @package   theme_ncmboost
- * @copyright 2018 Nicolas Jourdain
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
-namespace theme_ncmboost\output\core;
-defined('MOODLE_INTERNAL') || die;
-
-require_once($CFG->dirroot.'/course/renderer.php');
-/**
  * Extending the core_course_renderer interface.
  *
  * @copyright 2018 Nicolas Jourdain
@@ -37,6 +22,11 @@ require_once($CFG->dirroot.'/course/renderer.php');
  * @package theme_ncmboost
  * @category output
  */
+
+namespace theme_ncmboost\output\core;
+defined('MOODLE_INTERNAL') || die;
+
+require_once($CFG->dirroot.'/course/renderer.php');
 
 use cm_info;
 use core_availability\info;
@@ -70,7 +60,7 @@ class course_renderer extends \core_course_renderer {
 
         // Max lenght of the text.
         $textlength = 20;
-        
+
         if (isset($data->prevlink)) {
             // Add button style for the link.
             $data->prevlink->classes = "btn btn-primary";
@@ -80,7 +70,7 @@ class course_renderer extends \core_course_renderer {
                 if ($attribute['name'] === 'title') {
                     // Build new text and add text-icon at the beginning.
                     $data->prevlink->text = substr($attribute['value'], 0, $textlength);
-                    // Test if '...' are needed
+                    // Test if '...' are needed.
                     if ($data->prevlink->text !== $attribute['value']) {
                         $data->prevlink->text .= '...';
                     }
@@ -97,7 +87,7 @@ class course_renderer extends \core_course_renderer {
                 if ($attribute['name'] === 'title') {
                     // Build new text and add text-icon at the end.
                     $data->nextlink->text = substr($attribute['value'], 0, $textlength);
-                    // Test if '...' are needed
+                    // Test if '...' are needed.
                     if ($data->nextlink->text !== $attribute['value']) {
                         $data->nextlink->text .= '...';
                     }
@@ -129,7 +119,7 @@ class course_renderer extends \core_course_renderer {
             return $output;
         }
 
-        //Accessibility: for files get description via icon, this is very ugly hack!
+        // Accessibility: for files get description via icon, this is very ugly hack!
         $instancename = $mod->get_formatted_name();
         $altname = $mod->modfullname;
         // Avoid unnecessary duplication: if e.g. a forum name already
@@ -203,9 +193,11 @@ class course_renderer extends \core_course_renderer {
         if ($this->page->user_is_editing()) {
             switch ($completion) {
                 case COMPLETION_TRACKING_MANUAL :
-                    $completionicon = 'manual-enabled'; break;
+                    $completionicon = 'manual-enabled';
+                    break;
                 case COMPLETION_TRACKING_AUTOMATIC :
-                    $completionicon = 'auto-enabled'; break;
+                    $completionicon = 'auto-enabled';
+                    break;
             }
         } else if ($completion == COMPLETION_TRACKING_MANUAL) {
             switch($completiondata->completionstate) {
@@ -216,7 +208,8 @@ class course_renderer extends \core_course_renderer {
                     $completionicon = 'manual-y' . ($completiondata->overrideby ? '-override' : '');
                     break;
             }
-        } else { // Automatic
+        } else {
+            // Automatic.
             switch($completiondata->completionstate) {
                 case COMPLETION_INCOMPLETE:
                     $completionicon = 'auto-n' . ($completiondata->overrideby ? '-override' : '');
@@ -225,9 +218,11 @@ class course_renderer extends \core_course_renderer {
                     $completionicon = 'auto-y' . ($completiondata->overrideby ? '-override' : '');
                     break;
                 case COMPLETION_COMPLETE_PASS:
-                    $completionicon = 'auto-pass'; break;
+                    $completionicon = 'auto-pass';
+                    break;
                 case COMPLETION_COMPLETE_FAIL:
-                    $completionicon = 'auto-fail'; break;
+                    $completionicon = 'auto-fail';
+                    break;
             }
         }
         if ($completionicon) {
@@ -328,7 +323,7 @@ class course_renderer extends \core_course_renderer {
             echo $this->end_section_list();
         }
 
-        // Start single-section div
+        // Start single-section div.
         echo html_writer::start_tag('div', array('class' => 'single-section'));
 
         // The requested section page.
@@ -340,7 +335,7 @@ class course_renderer extends \core_course_renderer {
         $sectiontitle .= html_writer::start_tag('div', array('class' => 'section-navigation navigationtitle'));
         $sectiontitle .= html_writer::tag('span', $sectionnavlinks['previous'], array('class' => 'mdl-left'));
         $sectiontitle .= html_writer::tag('span', $sectionnavlinks['next'], array('class' => 'mdl-right'));
-        // Title attributes
+        // Title attributes.
         $classes = 'sectionname';
         if (!$thissection->visible) {
             $classes .= ' dimmed_text';

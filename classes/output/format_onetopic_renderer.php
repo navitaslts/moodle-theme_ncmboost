@@ -58,10 +58,10 @@ class format_onetopic_renderer extends \format_onetopic_renderer {
                 ($back >= 0 && $course->realcoursedisplay != COURSE_DISPLAY_MULTIPAGE)) && empty($links['previous'])) {
             if ($canviewhidden || $sections[$back]->uservisible) {
                 $params = array();
+                // Change.
                 if (!$sections[$back]->visible) {
                     $params = array('class' => 'dimmed_text ' . $myclasses);
-                }
-                else {
+                } else {
                     $params = array('class' => $myclasses);
                 }
                 $previouslink = html_writer::tag('span', $this->output->larrow(), array('class' => 'larrow'));
@@ -75,11 +75,10 @@ class format_onetopic_renderer extends \format_onetopic_renderer {
         while ($forward <= $this->numsections && empty($links['next'])) {
             if ($canviewhidden || $sections[$forward]->uservisible) {
                 $params = array();
-                // Change
+                // Change.
                 if (!$sections[$forward]->visible) {
                     $params = array('class' => 'dimmed_text ' . $myclasses);
-                }
-                else {
+                } else {
                     $params = array('class' => $myclasses);
                 }
                 $nextlink = get_section_name($course, $sections[$forward]);

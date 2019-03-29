@@ -118,5 +118,5 @@ $string['ncmbtnprimarycolor_desc'] = 'The button primary colour.';
 $string['privacy:metadata:preference:draweropennav'] = 'The user\'s preference for hiding or showing the drawer menu navigation.';
 $string['privacy:drawernavclosed'] = 'The current preference for the navigation drawer is closed.';
 $string['privacy:drawernavopen'] = 'The current preference for the navigation drawer is open.';
-// Mustache Template Strings
+// Mustache Template Strings.
 $string['complete'] = 'complete';
