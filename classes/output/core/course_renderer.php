@@ -143,7 +143,7 @@ class course_renderer extends \core_course_renderer {
         $activitylink = html_writer::empty_tag('img', array('src' => $mod->get_icon_url(),
                 'class' => 'iconlarge activityicon', 'alt' => ' ', 'role' => 'presentation')) .
                 html_writer::tag('span', $instancename . $altname, array('class' => 'instancename'));
-        $linkclasses .= "d-flex align-items-center";
+        $linkclasses .= " d-flex align-items-center";
         if ($mod->uservisible) {
             $output .= html_writer::link($url, $activitylink, array('class' => $linkclasses, 'onclick' => $onclick));
         } else {
