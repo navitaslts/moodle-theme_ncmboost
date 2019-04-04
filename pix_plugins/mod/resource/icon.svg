@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5043 6557 24 24">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="7165 2524 24 24">
   <defs>
     <style>
       .cls-1, .cls-2 {
-        fill: #2c84c8;
+        fill: #a54089;
       }
 
       .cls-1 {
@@ -10,7 +10,7 @@
       }
     </style>
   </defs>
-  <g id="File" transform="translate(-5416 6364)">
+  <g id="File" transform="translate(6792 2331)">
     <rect id="Rectangle_149" data-name="Rectangle 149" class="cls-1" width="24" height="24" transform="translate(373 193)"/>
     <path id="file-solid" class="cls-2" d="M5.25,3.188V0H.563A.561.561,0,0,0,0,.563V11.438A.561.561,0,0,0,.563,12H8.438A.561.561,0,0,0,9,11.438V3.75H5.813A.564.564,0,0,1,5.25,3.188ZM9,2.857V3H6V0h.143a.562.562,0,0,1,.4.164l2.295,2.3A.561.561,0,0,1,9,2.857Z" transform="translate(380.5 199)"/>
   </g>
