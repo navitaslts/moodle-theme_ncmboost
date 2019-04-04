@@ -157,7 +157,6 @@ if ($ADMIN->fulltree) {
         'CORE' => get_string('core', 'theme_ncmboost'),
         'CLASSIC' => get_string('classic', 'theme_ncmboost'),
         'SAMLAUTHFIRST' => get_string('samlauthfirst', 'theme_ncmboost'),
-        'TEN' => get_string('tenlogin', 'theme_ncmboost'),
     );
 
     $setting = new admin_setting_configselect('theme_ncmboost/loginpagetype',
