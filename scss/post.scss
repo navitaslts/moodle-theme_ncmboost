@@ -112,3 +112,12 @@ header.navbar-light .navbar-nav .open>.nav-link:hover {
     margin-top: 0;
     margin-left: 41px;
 }
+
+#envbar_spacer {
+    min-height: 50px;
+}
+
+.footnote {
+    padding-left: $grid-gutter-width / 2;
+    padding-right: $grid-gutter-width / 2;
+}

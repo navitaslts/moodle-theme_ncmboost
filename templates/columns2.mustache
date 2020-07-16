@@ -56,13 +56,14 @@
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{>theme_ncmboost/navbar}}
+    {{> theme_ncmboost/navbar }}
+    {{> theme_ncmboost/nav-drawer }}
 
     <div id="page" class="container-fluid">
         {{{ output.full_header }}}
 
         <div id="page-content" class="row">
-            <div id="region-main-box" class="col-xs-12">
+            <div id="region-main-box" class="col-12">
                 {{#hasregionmainsettingsmenu}}
                 <div id="region-main-settings-menu" class="d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
                     <div> {{{ output.region_main_settings_menu }}} </div>
@@ -89,17 +90,19 @@
             </div>
         </div>
     </div>
-    {{> theme_ncmboost/nav-drawer }}
+    {{> theme_ncmboost/footer }}
 </div>
-
-{{> theme_ncmboost/footer }}
-
-
 </body>
 </html>
 {{#js}}
-require(['theme_boost/loader']);
-require(['theme_boost/drawer'], function(mod) {
-    mod.init();
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+    M.util.js_complete('theme_boost/loader');
+});
+
+M.util.js_pending('theme_boost/drawer');
+require(['theme_boost/drawer'], function(drawer) {
+    drawer.init();
+    M.util.js_complete('theme_boost/drawer');
 });
 {{/js}}
